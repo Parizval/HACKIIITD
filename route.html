@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="route">
+
+        <div class="input">
+            <label for="dist">Distance</label>
+            <input type="number" name="dist" id="dist">
+            <span class="spin"></span>
+        </div>
+        <div class="button distance">
+            <button id='submit_button' type="submit"><span>GO</span> <i class="fa fa-check"></i></button>
+        </div>
+
+    </form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(document).ready(
+            function() {
+
+                $('#route').on('submit', function(event) {
+                    if ("geolocation" in navigator) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            lat = position.coords.latitude;
+                            long = position.coords.longitude;
+                            alert("Found your location\nLat : " + position.coords.latitude + "\nLang :" + position.coords.longitude);
+                            // 
+                            // 
+                            // 
+                            // 
+                        });
+                    } else {
+                        console.log("Browser doesn't support geolocation!");
+                    }
+                    $.ajax({
+                            data: {
+                                distance: $('#dist').val(),
+                                lati: lat,
+                                longi: long
+                            },
+                            type: "POST",
+                            url: '/route_process'
+                        })
+                        .done(function(data) {
+                            if (data.error) {
+                                alert("Error")
+                            } else {
+                                alert("Session started")
+                                    // $(location).attr('href', '/')
+                            }
+                        });
+                    event.preventDefault();
+
+
+                });
+            });
+    </script>
+
+</body>
+
+</html>
