@@ -5,8 +5,6 @@ import best_aqi
 # st_lat = 28.5456282
 # st_long = 77.2731505
 # distance = 20
-
-
 def make_map(st_lat, st_long, distance):
     distance = int(distance)
     st_long = float(st_long)
@@ -43,6 +41,6 @@ def make_map(st_lat, st_long, distance):
                     title='AQI: {}, Pollutant: {}'.format(str(i[0]), i[1]['dom_p'].upper()))
     gmap.marker(res[2][0], res[2][1], color='green',
                 title='AQI: {}, Pollutant: {}'.format(str(res[0]), res[1]['dom_p'].upper()))
-    # print(rest)
+    print(rest)
     gmap.draw(
-        "D:\\projects\\webdevlopment\\hackiiittest\\hackiiittest\\templates\\map.html")
+        "D:\\projects\\webdevlopment\\hackiitd\\HACKIIITD\\demo\\templates\\dashboard\\map.html")
