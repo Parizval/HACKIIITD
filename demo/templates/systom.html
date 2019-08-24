@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            /* background-image: ; */
+            background-color: black !important;
+            font-family: "Montserrat", sans-serif !important;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Symptom Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/vendor.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <!-- script
+        ================================================== -->
+    <script src="{{ url_for('static',filename='js/modernizr.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/pace.min.js')}}"></script>
+
+    <!-- favicons
+        ================================================== -->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico')}}" type="image/x-icon" />
+    <link rel="icon" href="{{ url_for('static',filename='favicon.ico')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="container main-container">
+        <div id="app">
+            <p>App not loaded.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static',filename='js/bundle.js')}}"></script>
+    <!--<script  src="{{ url_for('static',filename='js/bundle.js')}}"></script>-->
+</body>
+
+</html>
