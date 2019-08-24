@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <center>
+
+        <h5><a href={{ link }}>{{link}}</a></h5>
+
+        <form id="fits">
+
+            <input type="text" id="code" placeholder="Enter the Code">
+
+            <button type="submit">Submit</button>
+
+
+
+        </form>
+    </center>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+
+        $(document).ready(
+
+            function () {
+
+                $('#fits').on('submit', function (event) {
+
+                    $.ajax({
+
+                        data: {
+
+                            number: $('#code').val(),
+
+
+
+                        },
+
+                        type: "POST",
+
+                        url: '/step_data'
+
+                    })
+
+                        .done(function (data) {
+
+                            if (data.error) {
+
+                                alert("Error")
+
+                            }
+
+                            else {
+
+
+
+                            }
+
+                        });
+
+                    event.preventDefault();
+
+                });
+
+            });
+
+    </script>
+
+
+
+</body>
+
+</html>

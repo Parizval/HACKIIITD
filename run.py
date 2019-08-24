@@ -2,9 +2,9 @@ from gmplot import gmplot
 import best_aqi
 # st_lat = 28.4499693
 # st_long = 77.5821314
-# st_lat = 28.5456282
-# st_long = 77.2731505
-# distance = 20
+st_lat = 28.5456282
+st_long = 77.2731505
+distance = 20
 
 
 def make_map(st_lat, st_long, distance):
@@ -46,3 +46,6 @@ def make_map(st_lat, st_long, distance):
     # print(rest)
     gmap.draw(
         "D:\\projects\\webdevlopment\\hackiiittest\\hackiiittest\\templates\\map.html")
+
+
+make_map(st_lat, st_long, distance)

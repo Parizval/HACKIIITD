@@ -6,10 +6,10 @@ from haversine import haversine
 
 def get_aqi(lat, lon):
     api_url = 'https://api.breezometer.com/air-quality/v2/current-conditions?lat=' + \
-        str(lat)+'&lon='+str(lon)+'&key=fa2dfd535bfc41499843cd71dd8752d9'
+        str(lat)+'&lon='+str(lon)+'&key='+'ef7c203e51b54c3e8149842e59b6f8d8'
     call = requests.get(api_url)
     resp = json.loads(call.text)
-    dct = {}
+    dct = {}  # fa2dfd535bfc41499843cd71dd8752d9
     temp = resp['data']['indexes']['baqi']
     info = temp['aqi']
     dct['category'] = temp['category']
