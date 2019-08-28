@@ -21060,8 +21060,8 @@
         
 
         var settings = {
-            'app-id': "39d78e68",
-            'app-key': "7508294298e44fe29ed3ece554785394"
+            'app-id': "",
+            'app-key': ""
         };
 
         exports.default = settings;
