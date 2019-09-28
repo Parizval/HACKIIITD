@@ -5,7 +5,7 @@ import fit_data
 #   import run
 
 firebase = firebase.FirebaseApplication(
-    'https://fit-game-92ad4.firebaseio.com/', None)
+    '', None)
 
 app = Flask(__name__)
 app.debug = True
